@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Br.Sa.Scania.TrackNTrace.Outbound.Maritimo", "Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo.csproj", "{CA37DBBC-BDE7-4D4B-A9D0-8BCF4271F032}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Br.Sa.Scania.TrackNTrace.Outbound.Excel.Routine", "..\TesteEDMX\TesteEDMX\Br.Sa.Scania.TrackNTrace.Outbound.Excel.Routine.csproj", "{00FAC39D-1521-4576-AB03-0D193AAE561E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Br.Sa.Scania.TrackNTrace.ApiRequest", "Br.Sa.Scania.TrackNTrace.ApiRequest\Br.Sa.Scania.TrackNTrace.ApiRequest.csproj", "{07A938A3-9670-4C89-A409-1DBD5A42E189}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Br.Sa.Scania.TrackNTrace.TruckOnBoard.Outbound", "Br.Sa.Scania.TrackNTrace.TruckOnBoard.Outbound\Br.Sa.Scania.TrackNTrace.TruckOnBoard.Outbound.csproj", "{33BC86F2-6E6A-4496-9FF0-21D908A5A789}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA37DBBC-BDE7-4D4B-A9D0-8BCF4271F032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA37DBBC-BDE7-4D4B-A9D0-8BCF4271F032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA37DBBC-BDE7-4D4B-A9D0-8BCF4271F032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA37DBBC-BDE7-4D4B-A9D0-8BCF4271F032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00FAC39D-1521-4576-AB03-0D193AAE561E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00FAC39D-1521-4576-AB03-0D193AAE561E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00FAC39D-1521-4576-AB03-0D193AAE561E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00FAC39D-1521-4576-AB03-0D193AAE561E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07A938A3-9670-4C89-A409-1DBD5A42E189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07A938A3-9670-4C89-A409-1DBD5A42E189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07A938A3-9670-4C89-A409-1DBD5A42E189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07A938A3-9670-4C89-A409-1DBD5A42E189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33BC86F2-6E6A-4496-9FF0-21D908A5A789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BC86F2-6E6A-4496-9FF0-21D908A5A789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BC86F2-6E6A-4496-9FF0-21D908A5A789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BC86F2-6E6A-4496-9FF0-21D908A5A789}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8ACB6C04-8B10-45A7-8F23-6A5F46A3901F}
+	EndGlobalSection
+EndGlobal

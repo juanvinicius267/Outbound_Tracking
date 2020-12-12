@@ -1,0 +1,286 @@
+﻿@model Br.Sa.Scania.TrackNTrace.Outbound.Maritimo.Models.Maritimos
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .map {
+        height: 900px;
+        width: 2235px;
+        margin: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: -350px;
+    }
+
+    #map {
+        position: relative;
+    }
+
+    .full-height {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 30px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+    }
+
+    #block_container {
+        display: flex;
+    }
+</style>
+<head>
+    <meta content="X-UA-Compatible" http-equiv="IE=edge">
+    <noscript><meta content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html" http-equiv="refresh"></noscript>
+    <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Track&Trace - Outbound</title>
+    <script src="https://static.scania.com/build/global/3.5.3-1/js/corporate-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol-debug.js" type="text/javascript"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <link rel="stylesheet" href="https://openlayers.org/en/v5.3.0/css/ol.css" type="text/css">
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+    <c-corporate-header site-name="Track&Trace - Outbound" short-name="My app" site-url="/">
+        <nav-item location="#">Optional</nav-item>
+        <nav-item location="#">User Menu</nav-item>
+    </c-corporate-header>
+    <c-main-content style="padding-top:0px">
+        <c-main-navigation>
+            <primary-items>
+                <nav-item location="TrackNTrace">Home</nav-item>
+                <nav-item location="http://tracker-tracer.s3-eu-west-1.amazonaws.com/Outbound.html">Terrestre</nav-item>
+                <nav-item location="CadastroDeNavios">Cadastro de Navios</nav-item>
+                <nav-item location="Create">Create</nav-item>
+                <nav-item location="Index">Index</nav-item>
+            </primary-items>
+
+        </c-main-navigation>
+
+        <section style="padding-top:0px">
+
+            <h1>Edit</h1>
+
+
+            <hr />
+            <div class="container-fluid">
+                <div class="col-lg-6" style="left:500px">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="id" />
+                        <div style="float:left">
+                            <div class="form-group">
+                                <h4>Batch Id</h4>
+                                <label asp-for="BatchId" class="control-label"></label>
+                                <input asp-for="BatchId" class="form-control" />
+                                <span asp-validation-for="BatchId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Pop Id</h4>
+                                <label asp-for="PopId" class="control-label"></label>
+                                <input asp-for="PopId" class="form-control" />
+                                <span asp-validation-for="PopId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Chassi</h4>
+                                <label asp-for="Chassis" class="control-label"></label>
+                                <input asp-for="Chassis" class="form-control" />
+                                <span asp-validation-for="Chassis" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Customer Order</h4>
+                                <label asp-for="CustomerOrder" class="control-label"></label>
+                                <input asp-for="CustomerOrder" class="form-control" />
+                                <span asp-validation-for="CustomerOrder" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Part Period</h4>
+                                <label asp-for="PartPeriod" class="control-label"></label>
+                                <input asp-for="PartPeriod" class="form-control" />
+                                <span asp-validation-for="PartPeriod" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Type</h4>
+                                <label asp-for="Type" class="control-label"></label>
+                                <input asp-for="Type" class="form-control" />
+                                <span asp-validation-for="Type" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Market</h4>
+                                <label asp-for="Market" class="control-label"></label>
+                                <input asp-for="Market" class="form-control" />
+                                <span asp-validation-for="Market" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Model</h4>
+                                <label asp-for="Model" class="control-label"></label>
+                                <input asp-for="Model" class="form-control" />
+                                <span asp-validation-for="Model" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>PDD</h4>
+                                <label asp-for="PDD" class="control-label"></label>
+                                <input asp-for="PDD" class="form-control" />
+                                <span asp-validation-for="PDD" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Plan Packing</h4>
+                                <label asp-for="PlanPacking" class="control-label"></label>
+                                <input asp-for="PlanPacking" class="form-control" />
+                                <span asp-validation-for="PlanPacking" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Plan Delivery</h4>
+                                <label asp-for="PlanDelivery" class="control-label"></label>
+                                <input asp-for="PlanDelivery" class="form-control" />
+                                <span asp-validation-for="PlanDelivery" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Liner</h4>
+                                <label asp-for="Liner" class="control-label"></label>
+                                <input asp-for="Liner" class="form-control" />
+                                <span asp-validation-for="Liner" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Port Destination</h4>
+                                <label asp-for="PortDestination" class="control-label"></label>
+                                <input asp-for="PortDestination" class="form-control" />
+                                <span asp-validation-for="PortDestination" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Inttra Number</h4>
+                                <label asp-for="InttraNumber" class="control-label"></label>
+                                <input asp-for="InttraNumber" class="form-control" />
+                                <span asp-validation-for="InttraNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+                    
+
+                        <div style="float:right">
+                            <div class="form-group">
+                                <h4>Booking</h4>
+                                <label asp-for="Booking" class="control-label"></label>
+                                <input asp-for="Booking" class="form-control" />
+                                <span asp-validation-for="Booking" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Terminal</h4>
+                                <label asp-for="Terminal" class="control-label"></label>
+                                <input asp-for="Terminal" class="form-control" />
+                                <span asp-validation-for="Terminal" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Container 40</h4>
+                                <label asp-for="Container40" class="control-label"></label>
+                                <input asp-for="Container40" class="form-control" />
+                                <span asp-validation-for="Container40" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Container 20</h4>
+                                <label asp-for="Container20" class="control-label"></label>
+                                <input asp-for="Container20" class="form-control" />
+                                <span asp-validation-for="Container20" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Vessel Name</h4>
+                                <label asp-for="Vessel" class="control-label"></label>
+                                <input asp-for="Vessel" class="form-control" />
+                                <span asp-validation-for="Vessel" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>Last Date Out SLA</h4>
+                                <label asp-for="LastDateOutSLA" class="control-label"></label>
+                                <input asp-for="LastDateOutSLA" class="form-control" />
+                                <span asp-validation-for="LastDateOutSLA" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>ETD Santos</h4>
+                                <label asp-for="ETDSantos" class="control-label"></label>
+                                <input asp-for="ETDSantos" class="form-control" />
+                                <span asp-validation-for="ETDSantos" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>ETD Santos 2</h4>
+                                <label asp-for="ETD2Santos" class="control-label"></label>
+                                <input asp-for="ETD2Santos" class="form-control" />
+                                <span asp-validation-for="ETD2Santos" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>ATD Santos</h4>
+                                <label asp-for="ATDSantos" class="control-label"></label>
+                                <input asp-for="ATDSantos" class="form-control" />
+                                <span asp-validation-for="ATDSantos" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>ETA Destination</h4>
+                                <label asp-for="ETADestination" class="control-label"></label>
+                                <input asp-for="ETADestination" class="form-control" />
+                                <span asp-validation-for="ETADestination" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>ETA Destination 2</h4>
+                                <label asp-for="ETA2Destination" class="control-label"></label>
+                                <input asp-for="ETA2Destination" class="form-control" />
+                                <span asp-validation-for="ETA2Destination" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <h4>ATA Destination</h4>
+                                <label asp-for="ATADestination" class="control-label"></label>
+                                <input asp-for="ATADestination" class="form-control" />
+                                <span asp-validation-for="ATADestination" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Save" class="btn btn-primary" />
+                            </div>
+                            <div>
+                                <a asp-action="Index">Back to List</a>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+
+            
+
+            @section Scripts {
+                @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+            }
+        </section>
+    </c-main-content>
+    <c-corporate-footer style="padding-bottom:30px">
+        <c-social-media>
+            <nav-item icon="facebook" location="#" onclick="window.open('https://www.facebook.com/scaniagroup/')"></nav-item>
+            <nav-item icon="twitter" location="#"></nav-item>
+            <nav-item icon="youtube" location="#"></nav-item>
+            <nav-item icon="linkedin" location="#"></nav-item>
+        </c-social-media>
+        <!--<nav-item location="#">Legal notice</nav-item>
+        <nav-item location="#">Privacy statement</nav-item>
+        <nav-item location="#">Cookies</nav-item>
+        <nav-item location="#">Contact us</nav-item>-->
+    </c-corporate-footer>
+
+</body>
+</html>

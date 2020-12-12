@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Maritimo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BatchId" Type="nvarchar(max)" />
+    <Property Name="PopId" Type="nvarchar(max)" />
+    <Property Name="Chassis" Type="nvarchar(max)" />
+    <Property Name="CustomerOrder" Type="nvarchar(max)" />
+    <Property Name="PartPeriod" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar(max)" />
+    <Property Name="Market" Type="nvarchar(max)" />
+    <Property Name="Model" Type="nvarchar(max)" />
+    <Property Name="PDD" Type="nvarchar(max)" />
+    <Property Name="PlanPacking" Type="nvarchar(max)" />
+    <Property Name="PlanDelivery" Type="nvarchar(max)" />
+    <Property Name="Liner" Type="nvarchar(max)" />
+    <Property Name="PortDestination" Type="nvarchar(max)" />
+    <Property Name="InttraNumber" Type="nvarchar(max)" />
+    <Property Name="Booking" Type="nvarchar(max)" />
+    <Property Name="Terminal" Type="nvarchar(max)" />
+    <Property Name="Container40" Type="nvarchar(max)" />
+    <Property Name="Container20" Type="nvarchar(max)" />
+    <Property Name="Vessel" Type="nvarchar(max)" />
+    <Property Name="LastDateOutSLA" Type="nvarchar(max)" />
+    <Property Name="ETDSantos" Type="nvarchar(max)" />
+    <Property Name="ETD2Santos" Type="nvarchar(max)" />
+    <Property Name="ATDSantos" Type="nvarchar(max)" />
+    <Property Name="ETADestination" Type="nvarchar(max)" />
+    <Property Name="ETA2Destination" Type="nvarchar(max)" />
+    <Property Name="ATADestination" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="VesselData">
+    <Key>
+      <PropertyRef Name="VesselDataId" />
+    </Key>
+    <Property Name="VesselDataId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Imo" Type="nvarchar(max)" />
+    <Property Name="Mmsi" Type="nvarchar(max)" />
+    <Property Name="Indicative" Type="nvarchar(max)" />
+    <Property Name="Flag" Type="nvarchar(max)" />
+    <Property Name="AisVesselType" Type="nvarchar(max)" />
+    <Property Name="Capacity" Type="nvarchar(max)" />
+    <Property Name="VesselSize" Type="nvarchar(max)" />
+    <Property Name="Year" Type="nvarchar(max)" />
+    <Property Name="State" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="VesselLocation">
+    <Key>
+      <PropertyRef Name="VesselLocationId" />
+    </Key>
+    <Property Name="VesselLocationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mmsi" Type="nvarchar(max)" />
+    <Property Name="Lon" Type="nvarchar(max)" />
+    <Property Name="Lat" Type="nvarchar(max)" />
+    <Property Name="SavedHourOnDB" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Maritimo" EntityType="Self.Maritimo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VesselData" EntityType="Self.VesselData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VesselLocation" EntityType="Self.VesselLocation" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

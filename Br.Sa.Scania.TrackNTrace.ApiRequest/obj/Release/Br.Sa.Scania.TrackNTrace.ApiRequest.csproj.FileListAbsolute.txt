@@ -1,0 +1,12 @@
+C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\bin\Release\Br.Sa.Scania.TrackNTrace.ApiRequest.exe.config
+C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\bin\Release\Br.Sa.Scania.TrackNTrace.ApiRequest.exe
+C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\bin\Release\Br.Sa.Scania.TrackNTrace.ApiRequest.pdb
+C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\bin\Release\EntityFramework.dll
+C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\bin\Release\EntityFramework.xml
+C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\obj\Release\Br.Sa.Scania.TrackNTrace.ApiRequest.csprojAssemblyReference.cache
+C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\obj\Release\Br.Sa.Scania.TrackNTrace.ApiRequest.csproj.CoreCompileInputs.cache
+C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\obj\Release\Br.Sa.Scania.TrackNTrace.ApiRequest.csproj.CopyComplete
+C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\obj\Release\Br.Sa.Scania.TrackNTrace.ApiRequest.exe
+C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\obj\Release\Br.Sa.Scania.TrackNTrace.ApiRequest.pdb

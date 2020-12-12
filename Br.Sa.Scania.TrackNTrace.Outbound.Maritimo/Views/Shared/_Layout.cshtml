@@ -1,0 +1,40 @@
+﻿
+@{ 
+
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+    <meta content="X-UA-Compatible" http-equiv="IE=edge">
+    <noscript><meta content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html" http-equiv="refresh"></noscript>
+    <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Track&Trace - Outbound</title>
+    <script src="https://static.scania.com/build/global/3.5.3-1/js/corporate-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+   
+</head>
+<body>
+  
+   
+
+    <div>
+        @Html.Partial("~/Views/Shared/_Cabecalho.cshtml")
+
+    </div>
+    <div class="container-fluid">
+        <main>
+            @RenderBody()
+
+        </main>
+        
+    </div>
+    @Html.Partial("~/Views/Shared/_Rodape.cshtml")
+    @RenderSection("Scripts", false)
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿1>------ Build started: Project: Br.Sa.Scania.TrackNTrace.ApiRequest, Configuration: Debug Any CPU ------
+1>C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\Program.cs(6,7,6,13): warning CS0105: The using directive for 'System' appeared previously in this namespace
+1>C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\Program.cs(7,7,7,17): warning CS0105: The using directive for 'System.Net' appeared previously in this namespace
+1>C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\Program.cs(14,7,14,29): warning CS0105: The using directive for 'System.Threading.Tasks' appeared previously in this namespace
+1>C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\CallLocalAPI.cs(18,17,18,27): warning CS0219: The variable 'valueArray' is assigned but its value is never used
+1>C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\CallLocalAPI.cs(21,20,21,27): warning CS0168: The variable 'compara' is declared but never used
+1>C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\CallLocalAPI.cs(22,17,22,23): warning CS0168: The variable 'indice' is declared but never used
+1>C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\CallLocalAPI.cs(23,17,23,30): warning CS0219: The variable 'numberOfArray' is assigned but its value is never used
+1>C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\CallLocalAPI.cs(24,20,24,23): warning CS0168: The variable 'Num' is declared but never used
+1>  Br.Sa.Scania.TrackNTrace.ApiRequest -> C:\Users\ssbjvq\source\repos\Br.Sa.Scania.TrackNTrace.Outbound.Maritimo\Br.Sa.Scania.TrackNTrace.ApiRequest\bin\Debug\Br.Sa.Scania.TrackNTrace.ApiRequest.exe
+Building Br.Sa.Scania.TrackNTrace.ApiRequest...
+2>------ Publish started: Project: Br.Sa.Scania.TrackNTrace.ApiRequest, Configuration: Debug Any CPU ------
+Connecting to 'G:\15_TEMPORARY\Juan\Rotina para ler os navios\'...
+Publishing files...
+Publish success.
+G:\15_TEMPORARY\Juan\Rotina para ler os navios\
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Publish: 1 succeeded, 0 failed, 0 skipped ==========

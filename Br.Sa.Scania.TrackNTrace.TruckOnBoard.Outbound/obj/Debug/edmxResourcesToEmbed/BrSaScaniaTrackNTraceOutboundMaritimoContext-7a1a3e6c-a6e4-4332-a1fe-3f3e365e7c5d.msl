@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="Model.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maritimo">
+      <EntityTypeMapping TypeName="Model.Maritimo">
+        <MappingFragment StoreEntitySet="Maritimo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="BatchId" ColumnName="BatchId" />
+          <ScalarProperty Name="PopId" ColumnName="PopId" />
+          <ScalarProperty Name="Chassis" ColumnName="Chassis" />
+          <ScalarProperty Name="CustomerOrder" ColumnName="CustomerOrder" />
+          <ScalarProperty Name="PartPeriod" ColumnName="PartPeriod" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Market" ColumnName="Market" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="PDD" ColumnName="PDD" />
+          <ScalarProperty Name="PlanPacking" ColumnName="PlanPacking" />
+          <ScalarProperty Name="PlanDelivery" ColumnName="PlanDelivery" />
+          <ScalarProperty Name="Liner" ColumnName="Liner" />
+          <ScalarProperty Name="PortDestination" ColumnName="PortDestination" />
+          <ScalarProperty Name="InttraNumber" ColumnName="InttraNumber" />
+          <ScalarProperty Name="Booking" ColumnName="Booking" />
+          <ScalarProperty Name="Terminal" ColumnName="Terminal" />
+          <ScalarProperty Name="Container40" ColumnName="Container40" />
+          <ScalarProperty Name="Container20" ColumnName="Container20" />
+          <ScalarProperty Name="Vessel" ColumnName="Vessel" />
+          <ScalarProperty Name="LastDateOutSLA" ColumnName="LastDateOutSLA" />
+          <ScalarProperty Name="ETDSantos" ColumnName="ETDSantos" />
+          <ScalarProperty Name="ETD2Santos" ColumnName="ETD2Santos" />
+          <ScalarProperty Name="ATDSantos" ColumnName="ATDSantos" />
+          <ScalarProperty Name="ETADestination" ColumnName="ETADestination" />
+          <ScalarProperty Name="ETA2Destination" ColumnName="ETA2Destination" />
+          <ScalarProperty Name="ATADestination" ColumnName="ATADestination" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VesselData">
+      <EntityTypeMapping TypeName="Model.VesselData">
+        <MappingFragment StoreEntitySet="VesselData">
+          <ScalarProperty Name="VesselDataId" ColumnName="VesselDataId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Imo" ColumnName="Imo" />
+          <ScalarProperty Name="Mmsi" ColumnName="Mmsi" />
+          <ScalarProperty Name="Indicative" ColumnName="Indicative" />
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="AisVesselType" ColumnName="AisVesselType" />
+          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="VesselSize" ColumnName="VesselSize" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="State" ColumnName="State" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VesselLocation">
+      <EntityTypeMapping TypeName="Model.VesselLocation">
+        <MappingFragment StoreEntitySet="VesselLocation">
+          <ScalarProperty Name="VesselLocationId" ColumnName="VesselLocationId" />
+          <ScalarProperty Name="Mmsi" ColumnName="Mmsi" />
+          <ScalarProperty Name="Lon" ColumnName="Lon" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="SavedHourOnDB" ColumnName="SavedHourOnDB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

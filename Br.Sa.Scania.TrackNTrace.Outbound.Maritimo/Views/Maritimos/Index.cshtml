@@ -1,0 +1,296 @@
+﻿@model IEnumerable<Br.Sa.Scania.TrackNTrace.Outbound.Maritimo.Models.Maritimos>
+
+@{
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .map {
+        height: 900px;
+        width: 2235px;
+        margin: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: -350px;
+    }
+
+    #map {
+        position: relative;
+    }
+
+    .full-height {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 30px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+    }
+
+    #block_container {
+        display: flex;
+    }
+</style>
+<head>
+    <meta content="X-UA-Compatible" http-equiv="IE=edge">
+    <noscript><meta content="0;url=https://static.scania.com/vendors/components/pure-js/nonJS-browsers/1.0.0/nonJS-browsers.html" http-equiv="refresh"></noscript>
+    <script src="https://static.scania.com/vendors/components/pure-js/browser-reject/1.0.0/js/browser-reject.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Track&Trace - Outbound</title>
+    <script src="https://static.scania.com/build/global/3.5.3-1/js/corporate-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol-debug.js" type="text/javascript"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <link rel="stylesheet" href="https://openlayers.org/en/v5.3.0/css/ol.css" type="text/css">
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+    <c-corporate-header site-name="Track&Trace - Outbound" short-name="My app" site-url="/">
+        <nav-item location="#">Optional</nav-item>
+        <nav-item location="#">User Menu</nav-item>
+    </c-corporate-header>
+    <c-main-content style="padding-top:0px">
+        <c-main-navigation>
+            <primary-items>
+                <nav-item location="TrackNTrace">Home</nav-item>
+                <nav-item location="http://tracker-tracer.s3-eu-west-1.amazonaws.com/Outbound.html">Terrestre</nav-item>
+                <nav-item location="CadastroDeNavios">Cadastro de Navios</nav-item>
+                <nav-item location="Create">Create</nav-item>
+                <nav-item location="Index">Index</nav-item>
+            </primary-items>
+
+        </c-main-navigation>
+
+        <section style="padding-top:0px">
+
+
+
+            <p>
+                <div>
+                    <h1>Home Page</h1>
+
+                    <div class="input-group">
+
+                        <form asp-controller="Movies" asp-action="Index">
+                            <div>
+
+                                <span class="input-group">Nome do navio </span>
+                                <input class="form-control" placeholder="Ex: ZAT012/19" type="text" name="SearchString" />
+                                <button type="submit" class="icon-search"></button>
+                            </div>
+                        </form>
+                        <a asp-action="Create"><i class="icon-plus-sign">Add new item</i></a>
+                    </div>
+
+                </div>
+                <table class="table table-striped table-clickable table-panel copyable style-scope" >
+                    <thead class="style-scope ">
+                        <tr style="background-color:#EEEFF0 ;color:#3E7FA3">
+                            <th>
+                                @Html.DisplayNameFor(model => model.BatchId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PopId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Chassis)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.CustomerOrder)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PartPeriod)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Type)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Market)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Model)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PDD)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PlanPacking)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PlanDelivery)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Liner)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PortDestination)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.InttraNumber)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Booking)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Terminal)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Container40)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Container20)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Vessel)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.LastDateOutSLA)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ETDSantos)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ETD2Santos)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ATDSantos)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ETADestination)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ETA2Destination)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ATADestination)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr scope="row" style="color:#171717">
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.BatchId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PopId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Chassis)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CustomerOrder)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PartPeriod)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Type)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Market)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Model)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PDD)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PlanPacking)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PlanDelivery)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Liner)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PortDestination)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.InttraNumber)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Booking)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Terminal)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Container40)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Container20)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Vessel)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LastDateOutSLA)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ETDSantos)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ETD2Santos)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ATDSantos)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ETADestination)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ETA2Destination)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ATADestination)
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.id"><i class="icon-edit "></i></a>
+                                    <a asp-action="Details" asp-route-id="@item.id"><i class="icon-eye-open"></i></a>
+                                    <a asp-action="Delete" asp-route-id="@item.id"><i class="icon-trash "></i></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </p>
+
+        </section>
+    </c-main-content>
+    <c-corporate-footer style="padding-bottom:30px">
+        <c-social-media>
+            <nav-item icon="facebook" location="#" onclick="window.open('https://www.facebook.com/scaniagroup/')"></nav-item>
+            <nav-item icon="twitter" location="#"></nav-item>
+            <nav-item icon="youtube" location="#"></nav-item>
+            <nav-item icon="linkedin" location="#"></nav-item>
+        </c-social-media>
+        <!--<nav-item location="#">Legal notice</nav-item>
+        <nav-item location="#">Privacy statement</nav-item>
+        <nav-item location="#">Cookies</nav-item>
+        <nav-item location="#">Contact us</nav-item>-->
+    </c-corporate-footer>
+
+</body>
+</html>

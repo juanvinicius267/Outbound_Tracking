@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Maritimo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BatchId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PopId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Chassis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerOrder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PartPeriod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Market" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PDD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PlanPacking" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PlanDelivery" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Liner" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PortDestination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InttraNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Booking" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Terminal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Container40" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Container20" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Vessel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastDateOutSLA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ETDSantos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ETD2Santos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ATDSantos" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ETADestination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ETA2Destination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ATADestination" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="posico">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="licensePlate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DataHora" Type="DateTime" Precision="3" />
+    <Property Name="latitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="longitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TruckOnBoard">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="licensePlate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="trackNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VesselData">
+    <Key>
+      <PropertyRef Name="VesselDataId" />
+    </Key>
+    <Property Name="VesselDataId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Imo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Mmsi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Indicative" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Flag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AisVesselType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Capacity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="VesselSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VesselLocation">
+    <Key>
+      <PropertyRef Name="VesselLocationId" />
+    </Key>
+    <Property Name="VesselLocationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mmsi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Lon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Lat" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SavedHourOnDB" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+    <EntitySet Name="Maritimoes" EntityType="Self.Maritimo" />
+    <EntitySet Name="posicoes" EntityType="Self.posico" />
+    <EntitySet Name="TruckOnBoards" EntityType="Self.TruckOnBoard" />
+    <EntitySet Name="VesselDatas" EntityType="Self.VesselData" />
+    <EntitySet Name="VesselLocations" EntityType="Self.VesselLocation" />
+  </EntityContainer>
+</Schema>
